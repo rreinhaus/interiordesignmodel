@@ -1,0 +1,34 @@
+<!---Initialize Home Page--->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/web_style.css') }}">
+  <meta charset="UTF-8">
+</head>
+<body>
+<!---Initialize structure of Title and house picture--->
+<div class="container">
+<div class = "title">
+  <div class="task-title">Home Style Predictor</div>
+  <div class ='logo'> </div>
+</div>
+<!---Containerize main page for styling--->
+<div class = "page">
+  <!---Containerize paragraph and form for styling--->
+  <div class = "inputs">
+    <label> Note: Describe your dream home </label>
+    <!---Initialize form structure and inputs, set method to "POST"--->
+    <form action = "{{url_for('predict')}}" method = "post" class = "info">
+      <input type="text" id="style_text" name="Style Text" placeholder="Home description"/><span style="color:red" required="required"> * </span>
+      <button type="submit" class="btn">Predict</button>
+    <br>
+    <!---Set placeholder for prediction output--->
+    <div class ="pred">
+      <p class = "result"> {{ prediction_text }} </p>
+      <p class = "result"> {{ prediction_text_2 }} </p>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
