@@ -1,12 +1,8 @@
 pandas
-pickle
 sklearn
 nltk
-string
-zipfile
-pickle
 matplotlib
 pexels_api
 requests
 numpy
-tensorflow
+gunicorn

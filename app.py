@@ -2,6 +2,8 @@ from flask import Flask,render_template, request
 
 import pickle
 
+# style descriptions
+
 modern = """
 Modern design is an interior design style characterized
 by a monochromatic color palette, clean lines, minimalism, natural materials, and natural light. 
@@ -40,7 +42,7 @@ app = Flask(__name__, template_folder = 'templates')
 model = pickle.load(open('model_sgd.pkl','rb'))
 
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def home():
     return render_template('index.html')
 
