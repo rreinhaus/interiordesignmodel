@@ -2,6 +2,8 @@ from flask import Flask,render_template, request
 
 import pickle
 
+# style descriptions
+
 modern = """
 Modern design is an interior design style characterized
 by a monochromatic color palette, clean lines, minimalism, natural materials, and natural light. 
