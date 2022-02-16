@@ -6,3 +6,4 @@ pexels_api
 requests
 numpy
 gunicorn
+flask
